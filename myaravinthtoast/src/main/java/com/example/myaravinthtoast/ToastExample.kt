@@ -3,11 +3,22 @@ package com.example.myaravinthtoast
 import android.content.Context
 import android.widget.Toast
 
-class ToastExample {
+class SimpleToast {
+    var context:Context?=null
 
-    fun aravinthToast(c:Context,message:String)
+    fun init(context:Context)
     {
-        Toast.makeText(c,message,Toast.LENGTH_SHORT).show()
+        this.context=context
+    }
+
+    fun ToastShort(message:String)
+    {
+        Toast.makeText(context,message,Toast.LENGTH_SHORT).show()
 
     }
+    fun ToastLong(message:String)
+    {
+        Toast.makeText(context,message,Toast.LENGTH_LONG).show()
+    }
+
 }
